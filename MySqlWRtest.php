@@ -9,18 +9,18 @@ echo "start test....\n";
 
 echo "mysql write....\n";
 $startWriteTime=microtime(true);
+$sql = "INSERT INTO `PHPvsNodeJS` SET `text` = :text";  
+$stmt = $dbh->prepare($sql);  
 for ($i=1; $i <= 100000; $i++) { 
-	$sql = "INSERT INTO `PHPvsNodeJS` SET `text` = :text";  
-	$stmt = $dbh->prepare($sql);  
 	$stmt->execute(array(':text' => 'phptext'.$i));
 }
 $endWriteTime=microtime(true);
 
 echo "mysql read....\n";
 $startReadTime=microtime(true);
+$sql = "SELECT * FROM `PHPvsNodeJS` WHERE `id` = :id";  
+$stmt = $dbh->prepare($sql);  
 for ($i=1; $i <= 100000; $i++) {
-	$sql = "SELECT * FROM `PHPvsNodeJS` WHERE `id` = :id";  
-	$stmt = $dbh->prepare($sql);  
 	$stmt->execute(array(':id' => $i));
 	// var_dump( $stmt->fetchAll(PDO::FETCH_ASSOC)); 
 }
