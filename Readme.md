@@ -6,6 +6,10 @@ php need open extionsion php_pdo_mysql.dll or php_pdo_mysql.so
 ModeJS need open module
 >npm install mysql
 
+#Golang
+need install git,and need set $GoPath
+>go get github.com/go-sql-driver/mysql
+
 #result
 
 >php MySqlWRtest.php
@@ -47,4 +51,15 @@ mysql read....
 --------------------------------------------------------------
 Lua Wirte Time:9.921s
 Lua Read Time:11.806s
+--------------------------------------------------------------
+
+>go run MySqlWRtest.go
+mysql connect....
+mysql clean table....
+start test....
+mysql write....
+mysql read....
+--------------------------------------------------------------
+GoLang Wirte Time: 8.763000011444092
+GoLang Wirte Time: 9.901000022888184
 --------------------------------------------------------------
