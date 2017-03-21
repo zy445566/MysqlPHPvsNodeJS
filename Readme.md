@@ -1,14 +1,15 @@
 #Mysql
-    >need import test.sql
+*need import test.sql
 #PHP
-    >php need open extionsion php_pdo_mysql.dll or php_pdo_mysql.so
+*php need open extionsion 
+*php_pdo_mysql.dll or php_pdo_mysql.so
 #Nodejs
-    >ModeJS need open module
->npm install mysql
+*ModeJS need open module
+*npm install mysql
 
 #Golang
-    >need install git,and need set $GoPath
->go get github.com/go-sql-driver/mysql
+*need install git,and need set $GoPath
+*go get github.com/go-sql-driver/mysql
 
 #result
 ```sh
